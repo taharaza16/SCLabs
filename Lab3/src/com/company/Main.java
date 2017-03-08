@@ -57,9 +57,9 @@ public class Main {
         else if(lt3 == 0)
             lt3 = 40;
     }
-    static private void bookextralarge(){
+    static private void bookextralarge(int t){
         if(elt1 == 0)
-            elt1 = 40;
+            elt1 = t;
     }
     public static void main(String[] args) {
 	// write your code here
@@ -109,8 +109,7 @@ public class Main {
         int people;
         Scanner sc = new Scanner(System.in);
         while (true){
-            System.out.println("%d");
-            System.out.println(""+elt1+"\n"+lt1+"\n"+lt2+"\n"+lt3+"\n"+mt1+"\n"+mt2+"\n"+mt3+"\n"+mt4+"\n"+mt5+"\n"+mt6+"\n"+mt7+"\n"+mt8+"\n"+st1+"\n"+st2+"\n"+st3+"\n"+st4);
+            System.out.println("Extra Large Tables:\n"+elt1+"\nLarge Tables:\n"+lt1+"\n"+lt2+"\n"+lt3+"\nMedium Tables:\n"+mt1+"\n"+mt2+"\n"+mt3+"\n"+mt4+"\n"+mt5+"\n"+mt6+"\n"+mt7+"\n"+mt8+"\nSmall Tables:\n"+st1+"\n"+st2+"\n"+st3+"\n"+st4);
             System.out.println("Hello, To book a table enter the number of people dining:");
             people = sc.nextInt();
             if (people < 2){
@@ -122,8 +121,13 @@ public class Main {
             else if (people < 6){
                 booklarge();
             }
+            else if (people < 12){
+                System.out.println("Please Enter the time(for how long do you want to book the table)");
+                int time = sc.nextInt();
+                bookextralarge(time);
+            }
             else
-                bookextralarge();
+                System.out.println("people should be between 1 and 12");
         }
     }
 
