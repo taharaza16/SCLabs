@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Location" table="employee">
+        <meta attribute="class-description">
+            This class contains the location detail.
+        </meta>
+        <id name="locid" type="int" column="locId">
+            <generator class="native"/>
+        </id>
+        <property name="country" column="country" type="string"/>
+        <property name="region" column="region" type="string"/>
+        <property name="postalCode" column="postalCode" type="int"/>
+        <property name="latitude" column="latitude" type="double"/>
+        <property name="longitude" column="longitude" type="double"/>
+        <property name="metroCode" column="metroCode" type="int"/>
+        <property name="areaCode" column="areaCode" type="int"/>
+        <property name="city" column="city" type="string"/>
+    </class>
+</hibernate-mapping>
